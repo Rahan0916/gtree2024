@@ -1,6 +1,6 @@
 const { useRef, useEffect, useState } = React;
 
-window.About = function () {
+window.About = function About() {
  const targetNodes = useRef([]);
  const tabList = useRef(['인사말', '설립취지 및 연혁', '조직도', 'CI안내', '오시는 길']);
  const [activeTab, setActiveTab] = useState('greeting');
@@ -13,7 +13,7 @@ window.About = function () {
      setActiveTab(entry.target.id);
     }
    });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.3 });
 
   targetNodes.current.forEach(el => {
    el && observer.observe(el);
@@ -48,7 +48,7 @@ window.About = function () {
      <ul>
       {tabList.current.map(탭이름 => (
        <li key={탭이름} onClick={() => goTab(탭이름)}>
-        <a className={activeTab == 탭이름 ? 'active' : ''} href="#인사말">{탭이름}</a>
+        <a className={activeTab == 탭이름 ? 'active' : ''} href={`#${탭이름}`}>{탭이름}</a>
        </li>
       ))}
      </ul>

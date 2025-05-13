@@ -1,4 +1,4 @@
-window.Notion = function () {
+window.Notion = function Notion() {
 
       const { useState } = React;
 

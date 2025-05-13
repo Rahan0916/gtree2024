@@ -44,7 +44,7 @@ const App = () => {
         setContentComponent(<Notion/>);
         break;
       default:
-        setContentComponent([<MainVisual/>, <HomeMain/>, <HomeCarousel />]);
+        setContentComponent([<MainVisual/>, <HomeMain/>, <HomeCarousel/>]);
         break;
     }
 
